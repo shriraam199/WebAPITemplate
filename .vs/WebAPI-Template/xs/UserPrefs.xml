@@ -1,0 +1,42 @@
+﻿<Properties StartupConfiguration="{8C965915-209C-40A2-99B1-2256ACF44FA0}|Default">
+  <MonoDevelop.Ide.ItemProperties.WebAPITemplate PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="WebAPITemplate/WebAPITemplate.csproj">
+    <Files>
+      <File FileName="WebAPITemplate/WebAPITemplate.csproj" Line="4" Column="28" />
+      <File FileName="WebAPITemplate.Tests/WebAPITemplate.Tests.csproj" Line="9" Column="19" />
+      <File FileName="WebAPITemplate/Program.cs" Line="4" Column="43" />
+      <File FileName="WebAPITemplate/Controllers/GreetingController.cs" Line="11" Column="29" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="WebAPI-Template" expanded="True">
+            <Node name="WebAPITemplate" expanded="True" selected="True">
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Controllers" expanded="True" />
+            </Node>
+            <Node name="WebAPITemplate.Tests" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>_templateName</Value>
+          <Value>ex</Value>
+          <Value>Directory.GetParent(workingDirectory)</Value>
+          <Value>AppDomain.CurrentDomain.BaseDirectory</Value>
+          <Value>projectDirectory</Value>
+          <Value>files.Length</Value>
+          <Value>directoryInfo.GetFiles()</Value>
+          <Value>Directory.GetParent(workingDirectory).Parent.Parent.Parent.FullName</Value>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

@@ -1,0 +1,66 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-storage
+spec:
+  resources:
+    requests:
+      storage: 100Mi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+
+--- 
+
+apiVersion: apps/v1 
+kind: Deployment 
+metadata: 
+  name: project
+spec:
+  selector:
+    matchLabels:
+      app: project
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate 
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: project 
+    spec: 
+      containers:
+        - image: sparrow46world/project:latest
+          name: project 
+          ports:
+            - containerPort: 80
+              protocol: TCP 
+              name: project-port
+          env:
+            - name: ASPNETCORE_URLS
+              value: "http://+:80"
+          volumeMounts:
+            - name: log-volume 
+              mountPath: "/wwwroot"
+      volumes:
+        - name: log-volume
+          persistentVolumeClaim:
+            claimName: pvc-storage
+
+--- 
+
+apiVersion: v1 
+kind: Service 
+metadata: 
+  name: project 
+spec: 
+  type: LoadBalancer 
+  ports:
+    - port: 8080
+      targetPort: 80
+      protocol: TCP 
+      name: project-port
+  selector:
+    app: project
